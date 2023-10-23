@@ -9,6 +9,24 @@
     <h1>Panel Administratora</h1>
     
     <!-- Dodaj formularz lub inny interfejs do zarządzania użytkownikami -->
-    
+    <h2>Change Password</h2>
+
+    <form th:action="@{/change-password}" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" value=""><br>
+      
+        <div>
+            <label for="currentPassword">Current Password:</label>
+            <input type="password" id="currentPassword" name="currentPassword" required>
+        </div>
+        <div>
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+        </div>
+        <div>
+            <button type="submit">Change Password</button>
+        </div>
+    </form>
+
 </body>
 </html>
