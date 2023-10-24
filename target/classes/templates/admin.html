@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Panel Administratora</title>
+</head>
+<body>
+    <h1>Panel Administratora</h1>
+    <h1>Panel Administratora</h1>
+    
+    <!-- Dodaj formularz lub inny interfejs do zarządzania użytkownikami -->
+    <h2>Change Password</h2>
+
+    <form action="/changePassword" method="post">
+       
+      
+        <div>
+            <label for="oldPassword">Current Password:</label>
+            <input type="password" id="oldPassword" name="oldPassword" required>
+        </div>
+        <div>
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+        </div>
+        <div>
+            <button type="submit">Change Password</button>
+        </div>
+    </form>
+
+</body>
+</html>
