@@ -23,9 +23,12 @@ public class ChangePasswordController {
 @PostMapping("/changePassword")
 public String changePassword(@RequestParam("oldPassword") String oldPassword,
                              @RequestParam("newPassword") String newPassword) {
-    UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+    // Pobierz nazwę użytkownika bieżącego zalogowanego użytkownika
+    String username = SecurityContextHolder.getContext().getAuthentication().getName();
 
+    // Pobierz UserDetails za pomocą UserDetailsService
+    UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
  // For debugging - print the userDetails to console (remove this in production)
  System.out.println("Reloaded UserDetails: " + userDetails);
