@@ -22,10 +22,9 @@ public class ChangePasswordController {
 
 @PostMapping("/changePassword")
 public String changePassword(@RequestParam("oldPassword") String oldPassword,
-                             @RequestParam("newPassword") String newPassword) {
+                             @RequestParam("newPassword") String newPassword,
+                             @RequestParam("username") String username) {
     Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-    // Pobierz nazwę użytkownika bieżącego zalogowanego użytkownika
-    String username = SecurityContextHolder.getContext().getAuthentication().getName();
 
     // Pobierz UserDetails za pomocą UserDetailsService
     UserDetails userDetails = userDetailsService.loadUserByUsername(username);
@@ -36,13 +35,11 @@ public String changePassword(@RequestParam("oldPassword") String oldPassword,
     System.out.println("Authentication: " + authentication); 
     System.out.println("Username: " + userDetails.getUsername()); // Log username
     System.out.println("Stored password: " + userDetails.getPassword()); // Log stored password
-    System.out.println("Stored password: " + userDetails.getPassword()); 
     System.out.println("Old password: " + oldPassword); // Log old password
     System.out.println("UserDetails: " + userDetails); 
-    System.out.println("Explicit Password: " + ((UserDetails) authentication.getPrincipal()).getPassword());
     if (passwordEncoder.matches(oldPassword, userDetails.getPassword())) {
         InMemoryUserDetailsManager inMemoryUserDetailsManager = (InMemoryUserDetailsManager) userDetailsService;
-        inMemoryUserDetailsManager.changePassword(oldPassword, passwordEncoder.encode(newPassword));
+        inMemoryUserDetailsManager.updatePassword(userDetails, passwordEncoder.encode(newPassword));
         return "Password changed successfully!";
     } else {
         return "Old password is incorrect!";
