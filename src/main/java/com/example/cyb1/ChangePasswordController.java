@@ -32,11 +32,6 @@ public String changePassword(@RequestParam("oldPassword") String oldPassword,
  // For debugging - print the userDetails to console (remove this in production)
  System.out.println("Reloaded UserDetails: " + userDetails);
 
-    System.out.println("Authentication: " + authentication); 
-    System.out.println("Username: " + userDetails.getUsername()); // Log username
-    System.out.println("Stored password: " + userDetails.getPassword()); // Log stored password
-    System.out.println("Old password: " + oldPassword); // Log old password
-    System.out.println("UserDetails: " + userDetails); 
     if (passwordEncoder.matches(oldPassword, userDetails.getPassword())) {
         InMemoryUserDetailsManager inMemoryUserDetailsManager = (InMemoryUserDetailsManager) userDetailsService;
         inMemoryUserDetailsManager.updatePassword(userDetails, passwordEncoder.encode(newPassword));

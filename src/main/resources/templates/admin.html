@@ -30,6 +30,22 @@
         </div>
     </form>
 
+    <h2>Add New User</h2>
+
+    <form action="/addUser" method="post">
+        <div>
+            <label for="newUser">New User Name:</label>
+            <input type="text" id="newUser" name="newUser" required>
+        </div>
+        <div>
+            <label for="newUserPassword">New User Password:</label>
+            <input type="password" id="newUserPassword" name="newUserPassword" required>
+        </div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+
     <h2>Change Username</h2>
 
     <form action="/changeUsername" method="post">

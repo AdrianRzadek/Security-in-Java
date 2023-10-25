@@ -5,6 +5,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,7 +15,8 @@ public class ChangeUsernameController {
     private final InMemoryUserDetailsManager userDetailsManager = new InMemoryUserDetailsManager();
 
 @PostMapping("/changeUsername")
-    public String changeUsername(String oldUsername, String newUsername) {
+    public String changeUsername(@RequestParam("oldUsername") String oldUsername,
+                                 @RequestParam("newUsername") String newUsername) {
         // Check if old user exists
         if (!userDetailsManager.userExists(oldUsername)) {
             throw new UsernameNotFoundException("User not found: " + oldUsername);
