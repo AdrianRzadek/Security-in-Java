@@ -1,20 +1,17 @@
 package com.example.cyb1;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ChangeUsernameController {
 
-    private final InMemoryUserDetailsManager userDetailsManager;
+    @Autowired
+    private final InMemoryUserDetailsManager userDetailsManager = new InMemoryUserDetailsManager();
 
 @PostMapping("/changeUsername")
     public String changeUsername(String oldUsername, String newUsername) {
