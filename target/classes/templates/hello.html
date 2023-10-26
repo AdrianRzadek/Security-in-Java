@@ -7,7 +7,10 @@
     <body>
         <h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
         <div sec:authorize="hasRole('ADMIN')">
-            <a th:href="@{/admin}">Przejdź do /admin</a>
+            <a th:href="@{/admin}">Panel Administratora</a>
+        </div>
+        <div sec:authorize="hasRole('USER')">
+            <a th:href="@{/user}">Panel Uzytkownika</a>
         </div>
         <form th:action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
