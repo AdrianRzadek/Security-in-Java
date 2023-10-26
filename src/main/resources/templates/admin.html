@@ -10,6 +10,13 @@
     
     <a href="/hello">Close</a>
 
+    <h2>Aktualni Użytkownicy</h2>
+    <ul>
+        <li th:each="user : ${users}">
+            <span th:text="${user.username}"></span>
+        </li>
+    </ul>
+
     <h2>Add New User</h2>
 
     <form action="/addUser" method="post">
