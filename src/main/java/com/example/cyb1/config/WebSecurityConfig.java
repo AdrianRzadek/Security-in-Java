@@ -1,4 +1,4 @@
-package com.example.cyb1;
+package com.example.cyb1.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

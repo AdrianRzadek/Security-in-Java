@@ -1,4 +1,4 @@
-package com.example.cyb1;
+package com.example.cyb1.service;
 
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.stereotype.Service;
