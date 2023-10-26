@@ -21,14 +21,10 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-        .csrf().disable()
         .passwordManagement(Customizer.withDefaults())
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/", "/home").permitAll()
-                        .requestMatchers("/admin/**").hasRole("ADMIN") // Dodaj dostęp do ścieżki /admin tylko dla
-                        
-                        
-                                                                       // użytkowników z rolą "ADMIN"
+                        .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated())
                 .formLogin((form) -> form
                         .loginPage("/login")
