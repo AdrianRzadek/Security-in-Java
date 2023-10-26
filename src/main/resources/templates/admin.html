@@ -8,28 +8,6 @@
 <body>
     <h1>Panel Administratora</h1>
     
-    <!-- Dodaj formularz lub inny interfejs do zarządzania użytkownikami -->
-    <h2>Change Password</h2>
-
-    <form action="/changePassword" method="post">
-       
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div>
-            <label for="oldPassword">Current Password:</label>
-            <input type="password" id="oldPassword" name="oldPassword" required>
-        </div>
-        <div>
-            <label for="newPassword">New Password:</label>
-            <input type="password" id="newPassword" name="newPassword" required>
-        </div>
-        <div>
-            <button type="submit">Change Password</button>
-        </div>
-    </form>
-
     <h2>Add New User</h2>
 
     <form action="/addUser" method="post">
@@ -61,6 +39,39 @@
             <button type="submit">Change</button>
         </div>
     </form>
-</form>
+
+    <h2>Change Password</h2>
+
+    <form action="/changePassword" method="post">
+       
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="oldPassword">Current Password:</label>
+            <input type="password" id="oldPassword" name="oldPassword" required>
+        </div>
+        <div>
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+        </div>
+        <div>
+            <button type="submit">Change Password</button>
+        </div>
+    </form>
+
+    <h2>Delete User</h2>
+
+    <form action="/deleteUser" method="post">
+        <div>
+            <label for="userName">Username:</label>
+            <input type="text" id="userName" name="userName" required>
+        </div>
+        <div>
+            <button type="submit">Delete</button>
+        </div>
+    </form>
+
 </body>
 </html>
