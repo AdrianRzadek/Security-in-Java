@@ -20,24 +20,36 @@ public class UserChangePasswordController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-@PostMapping("/userChangePassword")
-public String userChangePassword(@RequestParam("oldPassword") String oldPassword,
-                             @RequestParam("newPassword") String newPassword) {
-    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+    @PostMapping("/userChangePassword")
+    public String userChangePassword(@RequestParam("oldPassword") String oldPassword,
+                                     @RequestParam("newPassword") String newPassword) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-    String username = authentication.getName();
-    // Pobierz UserDetails za pomocą UserDetailsService
-    UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+        String username = authentication.getName();
+        UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
- // For debugging - print the userDetails to console (remove this in production)
- System.out.println("Reloaded UserDetails: " + userDetails);
+        // For debugging - print the userDetails to console (remove this in production)
+        System.out.println("Reloaded UserDetails: " + userDetails);
 
-    if (passwordEncoder.matches(oldPassword, userDetails.getPassword())) {
-        InMemoryUserDetailsManager inMemoryUserDetailsManager = (InMemoryUserDetailsManager) userDetailsService;
-        inMemoryUserDetailsManager.updatePassword(userDetails, passwordEncoder.encode(newPassword));
-        return "Password changed successfully!";
-    } else {
-        return "Old password is incorrect!";
+        if (hasConsecutiveCharacters(newPassword)) {
+            return "Password should contain any sign only once!";
+        }
+
+        if (passwordEncoder.matches(oldPassword, userDetails.getPassword())) {
+            InMemoryUserDetailsManager inMemoryUserDetailsManager = (InMemoryUserDetailsManager) userDetailsService;
+            inMemoryUserDetailsManager.updatePassword(userDetails, passwordEncoder.encode(newPassword));
+            return "Password changed successfully!";
+        } else {
+            return "Old password is incorrect!";
+        }
     }
-}
+
+    private boolean hasConsecutiveCharacters(String password) {
+        for (int i = 1; i < password.length(); i++) {
+            if (password.charAt(i) == password.charAt(i - 1)) {
+                return true; // found consecutive characters
+            }
+        }
+        return false;
+    }
 }
