@@ -1,5 +1,7 @@
 package com.example.cyb1.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AddUserController {
-
+ private static final Logger logger  = LoggerFactory.getLogger(AddUserController.class);
     @Autowired
     private final InMemoryUserDetailsManager userDetailsManager = new InMemoryUserDetailsManager();
 
@@ -34,9 +36,11 @@ public class AddUserController {
         userDetailsManager.createUser(newUserDetails);
         
         if (userDetailsManager.userExists(newUser)) {
+            logger.info("New User Added!");
             return "New User Added!";
         }
         else {
+            logger.info("User not added :/");
             throw new UsernameNotFoundException("User not added :/");
         }
     }

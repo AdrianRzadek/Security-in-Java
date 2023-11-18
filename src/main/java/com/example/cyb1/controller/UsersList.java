@@ -1,11 +1,11 @@
 package com.example.cyb1.controller;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
+
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.lang.reflect.Field;
@@ -15,37 +15,22 @@ import java.util.Map;
 @RestController
 public class UsersList {
     
-    /**
-     *
-     */
-    /*
-
-    @Autowired
-    private final InMemoryUserDetailsManager userDetailsManager = new InMemoryUserDetailsManager();
-
-    @PostMapping("/usersList")
-    public String usersList() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String username = authentication.getName();
-        System.out.println("Reloaded UserDetails: " +  userDetailsManager.loadUserByUsername(username));
-        System.out.println("Reloaded UserDetails: " + username);
-        
-        return username;  // Returning the username for demonstration purposes.
-    }*/
-
-  
+   private static final Logger logger  = LoggerFactory.getLogger(UsersList.class);
         @Autowired
         private InMemoryUserDetailsManager userDetailsManager;
     
         @PostMapping("/usersList")
         public Collection<String> usersList() {
+            
             try {
                 Field usersField = InMemoryUserDetailsManager.class.getDeclaredField("users");
                 usersField.setAccessible(true);  // Make the private field accessible
     
                 Map<String, UserDetails> usersMap = (Map<String, UserDetails>) usersField.get(userDetailsManager);
     
+               var log = usersMap.keySet().toString();
                 // Return all usernames
+                logger.info(log + " info users list");
                 return usersMap.keySet();
     
             } catch (Exception e) {

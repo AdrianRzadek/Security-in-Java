@@ -1,5 +1,7 @@
 package com.example.cyb1.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -13,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  @RestController
 public class UserBlockController {
    
-
+ private static final Logger logger  = LoggerFactory.getLogger(UserBlockController.class);
     
     @Autowired
     private final InMemoryUserDetailsManager userDetailsManager = new InMemoryUserDetailsManager();
@@ -39,9 +41,11 @@ public class UserBlockController {
         userDetailsManager.updateUser(newUserDetails);
         
         if (userDetailsManager.userExists(userban)) {
+            logger.info("Banned");
             return "Banned!";
         }
         else {
+             logger.info("Not bannaned :/");
             throw new UsernameNotFoundException("Not bannaned :/");
         }
     }

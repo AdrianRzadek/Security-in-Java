@@ -1,5 +1,7 @@
 package com.example.cyb1.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -10,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ChangeUsernameController {
-
+ private static final Logger logger  = LoggerFactory.getLogger(ChangeUsernameController.class);
     @Autowired
     private final InMemoryUserDetailsManager userDetailsManager = new InMemoryUserDetailsManager();
 
@@ -19,6 +21,7 @@ public class ChangeUsernameController {
                                  @RequestParam("newUsername") String newUsername) {
         // Check if old user exists
         if (!userDetailsManager.userExists(oldUsername)) {
+             logger.info("User not found: " + oldUsername);
             throw new UsernameNotFoundException("User not found: " + oldUsername);
         }
 
@@ -37,6 +40,7 @@ public class ChangeUsernameController {
         // Delete the old user and create the new user
         userDetailsManager.deleteUser(oldUsername);
         userDetailsManager.createUser(newUserDetails);
+        logger.info("Username changed successfully!");
         return "Username changed successfully!";
     }
 }

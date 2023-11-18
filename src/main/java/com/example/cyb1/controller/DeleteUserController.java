@@ -26,10 +26,11 @@ public class DeleteUserController {
         if (userDetailsManager.userExists(userName)) {
             userDetailsManager.deleteUser(userName);
             
-            logger.info("działa logger");
+            logger.info("User " + userName + " successfully deleted");
             return "User " + userName + " successfully deleted";
         }
         else {
+             logger.info("Username not found");
             return "Username not found";
         }
     }
