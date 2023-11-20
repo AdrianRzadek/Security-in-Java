@@ -8,9 +8,6 @@ public class Cyb1Application {
 
 	public static void main(String[] args) throws Throwable {
 		SpringApplication.run(Cyb1Application.class, args);
-		
-
-
 	}
 
 }

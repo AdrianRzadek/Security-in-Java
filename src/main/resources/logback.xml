@@ -16,7 +16,7 @@
     </appender>
 
     <!-- Set the root logger level and attach appenders -->
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </root>
