@@ -1,0 +1,13 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/security
+                        http://www.springframework.org/schema/security/spring-security.xsd">
+<security:http>
+    <!-- Other configurations -->
+
+    <security:logout invalidate-session="true"
+                    success-handler-ref="Logout"
+                    logout-url="/login?logout" />
+</security:http>
