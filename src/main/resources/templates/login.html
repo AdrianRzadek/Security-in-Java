@@ -13,6 +13,23 @@
         <form th:action="@{/login}" method="post">
             <div><label> Nazwa: <input type="text" name="username"/> </label></div>
             <div><label> Hasło: <input type="password" name="password"/> </label></div>
+            <div class="row">
+                <div class="col-2">
+                    <label>CAPTCHA</label>
+                </div>
+                <div class="col-4">
+                    <img th:src="*{'data:realCaptcha/jpg;base64,'+ realCaptcha}"/>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-2">
+                    <label>ENTER CAPTCHA</label>
+                </div>
+                <div class="col-4">
+                    <input type="hidden" th:field="*{hiddenCaptcha}"/>
+                    <input type="text" th:field="*{captcha}" class="form-control"/>
+                </div>
             <div><input type="submit" value="Zaloguj"/></div>
         </form>
     </body>
