@@ -178,3 +178,161 @@
 00:45:49.788 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=EC0158876DAA6C525C6F3671F20908EF], Granted Authorities=[ROLE_ADMIN]]]
 00:45:49.790 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured POST /usersList
 00:45:49.805 [http-nio-8080-exec-8] INFO  c.example.cyb1.controller.UsersList - [admin, user] info users list
+16:29:34.601 [main] INFO  com.example.cyb1.Cyb1Application - Starting Cyb1Application using Java 17.0.2 with PID 18960 (C:\Users\adria\Documents\GitHub\cyb1\target\classes started by adria in C:\Users\adria\Documents\GitHub\cyb1)
+16:29:34.607 [main] INFO  com.example.cyb1.Cyb1Application - No active profile set, falling back to 1 default profile: "default"
+16:29:35.700 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:29:35.732 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+16:29:36.541 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+16:29:36.551 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:29:36.563 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:29:36.565 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+16:29:36.718 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:29:36.720 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1981 ms
+16:29:36.900 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:29:37.190 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:dcdf458f-8390-4476-97f9-5f60c72884d5 user=SA
+16:29:37.194 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:29:37.264 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:29:37.357 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+16:29:37.362 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+16:29:37.756 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:29:38.218 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:29:38.226 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:29:38.537 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:29:38.801 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@51df2a41, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@517bdce0, org.springframework.security.web.context.SecurityContextHolderFilter@4e9ea32f, org.springframework.security.web.header.HeaderWriterFilter@3909a854, org.springframework.security.web.csrf.CsrfFilter@186dcb05, org.springframework.security.web.authentication.logout.LogoutFilter@61d42275, org.springframework.security.web.RequestMatcherRedirectFilter@6fcc0a1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3749c2b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56ba8e8c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55f6f965, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c0b0bd9, org.springframework.security.web.session.SessionManagementFilter@586486c, org.springframework.security.web.access.ExceptionTranslationFilter@1d1c63af, org.springframework.security.web.access.intercept.AuthorizationFilter@451af781]
+16:29:39.122 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:29:39.161 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+16:29:39.180 [main] INFO  com.example.cyb1.Cyb1Application - Started Cyb1Application in 5.025 seconds (process running for 5.917)
+16:31:43.392 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:31:43.393 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:31:43.394 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:31:43.404 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /
+16:31:43.422 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+16:31:43.424 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 6DF569BC67138FE024949054E415EC71
+16:31:43.425 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.SimpleRedirectInvalidSessionStrategy - Starting new session (if required) and redirecting to '/login?logout'
+16:31:43.495 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.HttpSessionEventPublisher - Publishing event: org.springframework.security.web.session.HttpSessionCreatedEvent[source=org.apache.catalina.session.StandardSessionFacade@4678e65a]
+16:31:43.499 [http-nio-8080-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /login?logout
+16:31:43.538 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login?logout
+16:31:43.549 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+16:31:43.551 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login?logout
+16:33:31.632 [main] INFO  com.example.cyb1.Cyb1Application - Starting Cyb1Application using Java 17.0.2 with PID 19880 (C:\Users\adria\Documents\GitHub\cyb1\target\classes started by adria in C:\Users\adria\Documents\GitHub\cyb1)
+16:33:31.637 [main] INFO  com.example.cyb1.Cyb1Application - No active profile set, falling back to 1 default profile: "default"
+16:33:32.673 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:33:32.705 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+16:33:33.508 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+16:33:33.518 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:33:33.532 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:33:33.532 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+16:33:33.684 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:33:33.685 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1941 ms
+16:33:33.861 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:33:34.130 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:61327409-e443-40bc-b704-a175dfae23d0 user=SA
+16:33:34.135 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:33:34.202 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:33:34.307 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+16:33:34.314 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+16:33:34.737 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:33:35.280 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:33:35.290 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:33:35.585 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:33:35.864 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76ed7573, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51df2a41, org.springframework.security.web.context.SecurityContextHolderFilter@7fbbdd8a, org.springframework.security.web.header.HeaderWriterFilter@2095c331, org.springframework.security.web.csrf.CsrfFilter@3d7b3b18, org.springframework.security.web.authentication.logout.LogoutFilter@670c171c, org.springframework.security.web.RequestMatcherRedirectFilter@46fb9581, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@451af781, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79ec57b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57bac3f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@517bdce0, org.springframework.security.web.session.SessionManagementFilter@7b795db7, org.springframework.security.web.access.ExceptionTranslationFilter@54b2d002, org.springframework.security.web.access.intercept.AuthorizationFilter@7d156f8f]
+16:33:36.175 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:33:36.217 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+16:33:36.234 [main] INFO  com.example.cyb1.Cyb1Application - Started Cyb1Application in 5.099 seconds (process running for 5.837)
+16:33:48.016 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:33:48.017 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:33:48.020 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+16:33:48.033 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /
+16:33:48.055 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+16:33:48.056 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 83604E2CAF4A83C6291FF8BDA8DB408A
+16:33:48.064 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.SimpleRedirectInvalidSessionStrategy - Starting new session (if required) and redirecting to '/login?logout'
+16:33:48.130 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.HttpSessionEventPublisher - Publishing event: org.springframework.security.web.session.HttpSessionCreatedEvent[source=org.apache.catalina.session.StandardSessionFacade@4678e65a]
+16:33:48.134 [http-nio-8080-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /login?logout
+16:33:48.168 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login?logout
+16:33:48.178 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+16:33:48.182 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login?logout
+16:33:49.752 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /login
+16:33:49.918 [http-nio-8080-exec-3] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+16:33:49.919 [http-nio-8080-exec-3] DEBUG o.s.s.w.s.HttpSessionEventPublisher - Publishing event: org.springframework.security.web.session.HttpSessionIdChangedEvent[source=org.apache.catalina.session.StandardSessionFacade@4678e65a]
+16:33:49.920 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.s.ChangeSessionIdAuthenticationStrategy - Changed session id from 33246FEFC81B8406E86ECB45B9F7D262
+16:33:49.921 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.CsrfAuthenticationStrategy - Replaced CSRF Token
+16:33:49.922 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=33246FEFC81B8406E86ECB45B9F7D262], Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@4678e65a]
+16:33:49.923 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=33246FEFC81B8406E86ECB45B9F7D262], Granted Authorities=[ROLE_ADMIN]]
+16:33:49.926 [http-nio-8080-exec-3] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /
+16:33:49.949 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /
+16:33:49.955 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /
+16:33:49.971 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=33246FEFC81B8406E86ECB45B9F7D262], Granted Authorities=[ROLE_ADMIN]]]
+16:33:54.330 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /hello
+16:33:54.332 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=33246FEFC81B8406E86ECB45B9F7D262], Granted Authorities=[ROLE_ADMIN]]]
+16:33:54.333 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /hello
+16:33:55.732 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /admin
+16:33:55.734 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=33246FEFC81B8406E86ECB45B9F7D262], Granted Authorities=[ROLE_ADMIN]]]
+16:33:55.735 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /admin
+16:33:57.656 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing POST /usersList
+16:33:57.657 [http-nio-8080-exec-10] DEBUG o.s.security.web.csrf.CsrfFilter - Invalid CSRF token found for http://localhost:8080/usersList
+16:33:57.659 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+16:33:57.663 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing POST /error
+16:33:57.667 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=33246FEFC81B8406E86ECB45B9F7D262], Granted Authorities=[ROLE_ADMIN]]]
+16:33:57.668 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured POST /error
+16:34:00.056 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /admin
+16:34:00.058 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=33246FEFC81B8406E86ECB45B9F7D262], Granted Authorities=[ROLE_ADMIN]]]
+16:34:00.059 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /admin
+16:34:01.472 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /OTP
+16:34:01.472 [http-nio-8080-exec-4] DEBUG o.s.security.web.csrf.CsrfFilter - Invalid CSRF token found for http://localhost:8080/OTP
+16:34:01.473 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+16:34:01.473 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /error
+16:34:01.475 [http-nio-8080-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=33246FEFC81B8406E86ECB45B9F7D262], Granted Authorities=[ROLE_ADMIN]]]
+16:34:01.476 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /error
+16:34:02.799 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /admin
+16:34:02.801 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=33246FEFC81B8406E86ECB45B9F7D262], Granted Authorities=[ROLE_ADMIN]]]
+16:34:02.803 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /admin
+16:35:17.072 [main] INFO  com.example.cyb1.Cyb1Application - Starting Cyb1Application using Java 17.0.2 with PID 17100 (C:\Users\adria\Documents\GitHub\cyb1\target\classes started by adria in C:\Users\adria\Documents\GitHub\cyb1)
+16:35:17.076 [main] INFO  com.example.cyb1.Cyb1Application - No active profile set, falling back to 1 default profile: "default"
+16:35:17.982 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:35:18.012 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+16:35:18.808 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+16:35:18.819 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:35:18.823 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:35:18.825 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+16:35:19.005 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:35:19.007 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1849 ms
+16:35:19.173 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:35:19.426 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:801d2671-900e-4cfd-a8f0-98e3fa347a51 user=SA
+16:35:19.430 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:35:19.492 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:35:19.592 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+16:35:19.596 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+16:35:20.006 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:35:20.564 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:35:20.572 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:35:20.843 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:35:21.108 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@47fca3cc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55746340, org.springframework.security.web.context.SecurityContextHolderFilter@13d10057, org.springframework.security.web.header.HeaderWriterFilter@7981963f, org.springframework.security.web.authentication.logout.LogoutFilter@608b906d, org.springframework.security.web.RequestMatcherRedirectFilter@67784537, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3e0855b0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14993306, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7109b603, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a0c7af6, org.springframework.security.web.access.ExceptionTranslationFilter@50bb1c1f, org.springframework.security.web.access.intercept.AuthorizationFilter@11978f52]
+16:35:21.415 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:35:21.457 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+16:35:21.472 [main] INFO  com.example.cyb1.Cyb1Application - Started Cyb1Application in 4.981 seconds (process running for 5.754)
+16:35:25.550 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:35:25.551 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:35:25.553 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:35:25.562 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /hello
+16:35:25.610 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+16:35:25.684 [http-nio-8080-exec-2] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8080/hello?continue to session
+16:35:25.686 [http-nio-8080-exec-2] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/login
+16:35:25.721 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+16:35:25.722 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+16:35:26.127 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+16:35:28.780 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /login
+16:35:28.944 [http-nio-8080-exec-4] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+16:35:28.945 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.s.ChangeSessionIdAuthenticationStrategy - Changed session id from E2054C3319BFE8F3302334FF181FFE4B
+16:35:28.947 [http-nio-8080-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2054C3319BFE8F3302334FF181FFE4B], Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@7388e28f]
+16:35:28.948 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2054C3319BFE8F3302334FF181FFE4B], Granted Authorities=[ROLE_ADMIN]]
+16:35:28.950 [http-nio-8080-exec-4] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/hello?continue
+16:35:28.973 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /hello?continue
+16:35:28.980 [http-nio-8080-exec-5] DEBUG o.s.s.w.s.HttpSessionRequestCache - Loaded matching saved request http://localhost:8080/hello?continue
+16:35:28.985 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2054C3319BFE8F3302334FF181FFE4B], Granted Authorities=[ROLE_ADMIN]]]
+16:35:28.987 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /hello?continue
+16:35:31.578 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /admin
+16:35:31.582 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2054C3319BFE8F3302334FF181FFE4B], Granted Authorities=[ROLE_ADMIN]]]
+16:35:31.583 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /admin
+16:35:33.025 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /usersList
+16:35:33.027 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2054C3319BFE8F3302334FF181FFE4B], Granted Authorities=[ROLE_ADMIN]]]
+16:35:33.028 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured POST /usersList
+16:35:33.039 [http-nio-8080-exec-1] INFO  c.example.cyb1.controller.UsersList - [admin, user] info users list

@@ -71,55 +71,10 @@
         <scope>runtime</scope>
     </dependency>
 
-<dependency>
-    <groupId>ch.qos.logback</groupId>
-    <artifactId>logback-core</artifactId>
-    <version>1.3.5</version>
-</dependency>
 
-
-
-<dependency>
-    <groupId>ch.qos.logback</groupId>
-    <artifactId>logback-classic</artifactId>
-    <version>1.3.5</version>
-</dependency>
-
-	
-   <dependency>
-     <groupId>log4j</groupId>
-     <artifactId>log4j</artifactId>
-     <version>1.2.17</version>
-   </dependency>
  </dependencies>
 
- <configuration debug="true">
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <!-- encoders are assigned the type
-             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
-        <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
-
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>tests.log</file>
-        <append>true</append>
-        <encoder>
-            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
-        </encoder>
-    </appender>
-    
-    <logger name="com.baeldung.logback" level="INFO" /> 
-    <logger name="com.baeldung.logback.tests" level="WARN"> 
-        <appender-ref ref="FILE" /> 
-    </logger> 
-
-    <root level="debug">
-        <appender-ref ref="STDOUT" />
-    </root>
-</configuration>
-
+ 
 	<build>
 		<plugins>
 			<plugin>
