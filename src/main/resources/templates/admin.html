@@ -28,8 +28,13 @@
         </div>
         <div>
             <label for="newUserPassword">New User Password:</label>
-            <input type="password" id="newUserPassword" name="newUserPassword" required>
+            <input type="password" id="newUserPassword" name="newUserPassword" >
         </div>
+        <div>
+            <label for="otp">OTP</label>
+            <input type="checkbox" id="otp" name="otp">
+        </div>
+     
         <div>
             <button type="submit">Add</button>
         </div>
@@ -46,6 +51,7 @@
             <label for="newUsername">New Username:</label>
             <input type="text" id="newUsername" name="newUsername" required>
         </div>
+   
         <div>
             <button type="submit">Change</button>
         </div>
@@ -65,7 +71,11 @@
         </div>
         <div>
             <label for="newPassword">New Password:</label>
-            <input type="password" id="newPassword" name="newPassword" required>
+            <input type="password" id="newPassword" name="newPassword" >
+        </div>
+        <div>
+            <label for="otp">OTP</label>
+            <input type="checkbox" id="otp" name="otp">
         </div>
         <div>
             <button type="submit">Change Password</button>
@@ -97,12 +107,12 @@
         <button type="submit">Ban</button>
     </form>
     </div>
-    <div>
+   <!-- <div>
         <form action="/OTP" method="post">
         <label for="otp">OTP</label>
         <p id="otp"></p>
-        <button type="submit">Generate OTP</button>
+        <button type="submit">Set OTP</button>
     </form>
-    </div>
+    </div>-->
 </body>
 </html>
