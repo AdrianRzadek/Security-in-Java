@@ -22,9 +22,16 @@ public class AddUserController {
 
     @PostMapping("/addUser")
     public String addNewUser(@RequestParam("newUser") String newUser,
-                             @RequestParam("newUserPassword") String newUserPassword) {
+                             @RequestParam("newUserPassword") String newUserPassword,
+                             @RequestParam(value = "otp", defaultValue = "false") boolean otp) {
         System.out.println(newUser + " " + newUserPassword);
         
+        if(otp != false){
+        String generatedPassword = OTP.generatePassword();
+        System.out.println("Generated OTP: " + generatedPassword);
+           newUserPassword = generatedPassword;
+            System.out.println("Generated OTP new User Password: " + newUserPassword );
+    }
         // Create a new user details
         UserDetails newUserDetails = org.springframework.security.core.userdetails.User.builder()
         .username(newUser)
