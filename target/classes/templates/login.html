@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
     <head>
         <title>Spring Security Example </title>
+
     </head>
     <body>
         <div th:if="${param.error}">
@@ -11,8 +12,15 @@
             Wylogowano
         </div>
         <form th:action="@{/login}" method="post">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
             <div><label> Nazwa: <input type="text" name="username"/> </label></div>
             <div><label> Hasło: <input type="password" name="password"/> </label></div>
+            <div class="row">
+                <label for="captcha">CAPTCHA:</label>
+    <img src="/captcha" alt="CAPTCHA" />
+    <input type="text" id="captcha" name="captcha" required />
+                </div>
+             
             <div><input type="submit" value="Zaloguj"/></div>
         </form>
     </body>
