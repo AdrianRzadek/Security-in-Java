@@ -1,31 +1,44 @@
 package com.example.cyb1.controller;
 
-import com.example.cyb1.service.CaptchaService;
+
 
 import cn.apiclub.captcha.Captcha;
+import cn.apiclub.captcha.backgrounds.FlatColorBackgroundProducer;
+import cn.apiclub.captcha.noise.CurvedLineNoiseProducer;
+import cn.apiclub.captcha.text.producer.DefaultTextProducer;
+import cn.apiclub.captcha.text.renderer.WordRenderer;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.awt.Color;
+
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/captcha")
 public class CaptchaController {
 
-    @GetMapping("/captcha")
-    public String getCaptcha(Model model) {
-    
-        
-        // Create a new Captcha
-        Captcha captcha = CaptchaService.createCaptcha(240, 70);
-        
-        // Encode the Captcha as a base64 string
-        String realCaptcha = CaptchaService.encodeCaptcha(captcha);
-        
-        // Set model attributes
-        model.addAttribute("realCaptcha", realCaptcha);
-        model.addAttribute("hiddenCaptcha", "yourHiddenCaptchaValue"); // Set the hidden captcha value
-        model.addAttribute("captcha", ""); // You may set an initial value for the text input if needed
-        
-        return "captcha"; // Return the name of your Thymeleaf template (e.g., "captcha.html")
+    @GetMapping
+    public void generateCaptcha(HttpServletResponse response) throws IOException {
+        // Create a captcha object
+        Captcha captcha = new Captcha.Builder(200, 50)
+                .addBackground(new FlatColorBackgroundProducer(Color.WHITE))
+                .addText(new DefaultTextProducer())
+                .addNoise(new CurvedLineNoiseProducer())
+                .build();
+
+        // Set the response headers
+        response.setContentType("image/png");
+        response.setHeader("cache-control", "no-store, no-cache, must-revalidate");
+
+        // Write the image to the response stream
+        ImageIO.write(captcha.getImage(), "png", response.getOutputStream());
     }
 }
