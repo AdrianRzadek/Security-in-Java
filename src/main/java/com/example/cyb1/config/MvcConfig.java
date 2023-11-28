@@ -22,6 +22,7 @@ public class MvcConfig implements WebMvcConfigurer {
 		registry.addViewController("/Block").setViewName("/Block");
 		registry.addViewController("/OTP").setViewName("/OTP");
 		registry.addViewController("/captcha").setViewName("/login");
+		registry.addViewController("/validate").setViewName("/login");
 	}
 
 }
