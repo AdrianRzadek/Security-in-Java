@@ -5,6 +5,7 @@
     <meta charset="UTF-8"/>
     <title>Panel Uzytkownika</title>
     <http create-session="ifRequired"></http>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <h1>Panel Uzytkownika</h1>
@@ -26,6 +27,7 @@
         <div>
             <button type="submit">Change Password</button>
         </div>
+        <div class="g-recaptcha" data-sitekey="${recaptchaSiteKey}"></div>
     </form>
 
 </body>

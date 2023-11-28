@@ -64,6 +64,7 @@
         <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
 
+
     <!-- H2 Database (for demo purposes, use a real database in production) -->
     <dependency>
         <groupId>com.h2database</groupId>
@@ -77,6 +78,11 @@
     <version>1.2.2</version>
 </dependency>
 
+<dependency>
+    <groupId>com.google.api-client</groupId>
+    <artifactId>google-api-client</artifactId>
+    <version>1.31.0</version>
+</dependency>
 
  </dependencies>
 
